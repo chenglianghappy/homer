@@ -22,7 +22,9 @@ homer项目提供了这样的一种解决方案：通过Javaagent技术，为jav
 * 通过httpheader方式：
 
   无论是前端还是java上游服务，都可以手动在request中添加header信息，需要注意的是，header信息必须以**X-homer-**(可以自定义)作为前缀，以HttpClient为例，放入header：HttpRequest.addHeader("X-homer-token","123456");
-  自定义修改homer-client/src/main/java/com/kkb/common/homer/client/HomerUtil.java
+  
+  自定义修改header，可以修改代码，在 homer-client/src/main/java/com/kkb/common/homer/client/HomerUtil.java 文件中的
+  
   public static final String HOMER_HEADER_PREFIX = "X-homer-"; // 可以自定义修改
 
 
